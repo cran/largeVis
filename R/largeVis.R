@@ -33,17 +33,13 @@
 #' @references Jian Tang, Jingzhou Liu, Ming Zhang, Qiaozhu Mei. \href{https://arxiv.org/abs/1602.00370}{Visualizing Large-scale and High-dimensional Data.}
 #'
 #' @examples
-#' \dontrun{
 #' # iris
 #' data(iris)
 #' dat <- as.matrix(iris[,1:4])
-#' dat <- scale(dat)
-#' dupes = which(duplicated(dat))
-#' dat <- dat[-dupes,] # duplicates can cause the algorithm to fail
-#' dat <- t(dat)
-#' visObject <- largeVis(dat, max_iter = 20, K = 10, sgd_batches = 10000)
+#' visObject <- largeVis(dat, max_iter = 20, K = 10, sgd_batches = 10000, threads = 1)
 #' plot(t(visObject$coords))
 #'
+#' \dontrun{
 #' # mnist
 #' # Note: The MNIST dataset may be obtained using the deepnet package.
 #' load("./mnist.Rda")
@@ -74,7 +70,7 @@ largeVis <- function(x,
                      verbose = getOption("verbose", TRUE),
                     ...) {
 
-	if (!(is.matrix(x) && is.numeric(x)) && !is.data.frame(x)) stop("LargeVis requires a matrix or data.frame")
+	if (!(is.matrix(x) && is.numeric(x)) && !is.data.frame(x) && ! inherits(x, "Matrix")) stop("LargeVis requires a matrix or data.frame")
 	if (is.data.frame(x)) x <- t(as.matrix(x[, sapply(x, is.numeric)]))
 
   #############################################
@@ -121,7 +117,6 @@ largeVis <- function(x,
   #######################################################
 
   returnvalue <- list(
-    knns = t(knns),
     wij = wij,
     call = sys.call(),
     coords = coords
