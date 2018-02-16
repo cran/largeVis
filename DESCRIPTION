@@ -1,9 +1,9 @@
 Package: largeVis
 Type: Package
 Title: High-Quality Visualizations of Large, High-Dimensional Datasets
-Version: 0.2.1
+Version: 0.2.1.1
 Author: Amos B. Elberg
-Maintainer: Amos Elberg <amos.elberg@gmail.com>
+Maintainer: ORPHANED
 Description: Implements the largeVis algorithm (see Tang, et al. (2016)  <DOI:10.1145/2872427.2883041>) for visualizing very large high-dimensional datasets. Also very fast search for approximate nearest neighbors; outlier detection; and optimized implementations of the HDBSCAN*, DBSCAN and OPTICS clustering algorithms; plotting functions for visualizing the above.
 License: GPL-3
 LazyData: TRUE
@@ -19,6 +19,11 @@ NeedsCompilation: yes
 BuildVignettes: TRUE
 VignetteBuilder: knitr
 SystemRequirements: C++11
-Packaged: 2017-05-08 01:51:38 UTC; aelberg
+Packaged: 2018-02-13 17:04:30 UTC; ripley
 Repository: CRAN
-Date/Publication: 2017-05-08 12:01:23 UTC
+Date/Publication: 2018-02-16 19:29:15 UTC
+X-CRAN-Original-Maintainer: Amos Elberg <amos.elberg@gmail.com>
+X-CRAN-Comment: Orphaned and corrected on 2018-02-16 as check errors
+        were not corrected despite reminder.
+ .
+ Misue of BLAS_LIBS/LAPACK_LIBS.

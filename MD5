@@ -1,4 +1,4 @@
-ceb2b96681874404521c994ab55b4317 *DESCRIPTION
+e6216ff4cf512181e785425e1ebdc550 *DESCRIPTION
 dc9af972e13f77b910ab56820f266f19 *NAMESPACE
 526395ccb88ad434449847781796606c *NEWS.md
 c770c41e55bf494a6797a18b965be5eb *R/RcppExports.R
@@ -56,7 +56,7 @@ a692cd9059c07df53dafe863a1fda42f *man/largeVis.Rd
 59dbb00627fced86347ac735c4ac300d *man/projectKNNs.Rd
 232721b7f63a5f27f63df37762a1c2ef *man/randomProjectionTreeSearch.Rd
 344ff13526ea89493ad7ec522edbeddf *man/sgdBatches.Rd
-8409f7fe495caa7512d5540c113f4a91 *src/Makevars
+588534874ae2da84ac4cd78a9c7c838d *src/Makevars
 8a9e161a34250f6d8608cf3636ffd8d9 *src/RcppExports.cpp
 84abcbed6f2f01f426c429328649344c *src/alias.h
 90c56598458428ef9c555b4e39dd23c3 *src/checkfunctions.cpp
